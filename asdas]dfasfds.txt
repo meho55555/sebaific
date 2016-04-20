@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#define ROZM 100
 
-int main()
 {
     char *pstr=NULL;
     int i, dlugosc;
