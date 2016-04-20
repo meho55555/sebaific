@@ -2,9 +2,9 @@
 #include<math.h>
 main()
 {
-float polekola, r;
-printf("Podaj promieÒ ko≥a\n");
+float polekola, d;
+printf("Podaj promie≈Ñ ko≈Ça\n");
 scanf("%f", &r);
 polekola=M_PI*r*r;
-printf("Pole ko≥a wynosi %f", polekola);
+printf("Pole ko≈Ça wynosi %f", polekola);
 }
