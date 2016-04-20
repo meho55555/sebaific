@@ -1,10 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define ROZM 10
-int * add(int ** tab, int n, int new_elem)
-{
-    int * nt=NULL;
-    int i;
+#define ROZM dfsa    int i;
     nt = malloc((n+1) * sizeof(*nt));
     if (nt == NULL)
         return 0;
