@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+main()
+{
+int srednia, a=75, b=9;
+srednia=a/b;
+printf("Œrednio na wykonanie jednego zadania zosta³o %d\n minut", srednia);
+}
+
+ 
+
+#include<stdio.h>
+
+main()
+{
+float srednia, a=75.0, b=9;
+srednia=a/b;
+printf("Œrednio na wykonanie jednego zadania zosta³o %f minut", srednia);
+}

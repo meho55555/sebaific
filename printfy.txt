@@ -1,0 +1,9 @@
+#include<stdio.h>
+
+main()
+{
+printf("Sebastian Cyganek\n");
+printf("Sebastian\nCyganek\n");
+printf("Sebastian");
+printf("Cyganek");
+}

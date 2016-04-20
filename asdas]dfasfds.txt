@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define ROZM 100
+int deleteLastChar(char** pstr)
+{
+    char * nt=NULL;
+    int i, k;
+    for(i=0; (*pstr)[i]!='\0'; i++)
+    {
+        i=i;
+    }
+    nt = malloc((i-2) * sizeof(*nt));
+    if (nt == NULL)
+        return 0;
+    for(k=0; k<(i-2); k++)
+    {
+        nt[k]=(*pstr)[k];
+    }
+    free(*pstr);
+    *pstr=nt;
+    return (i-2);
+}
+int main()
+{
+    char *pstr=NULL;
+    int i, dlugosc;
+    pstr=malloc(ROZM * sizeof(*pstr));
+    printf("Podaj napis\n");
+    fgets(pstr,ROZM,stdin);
+    dlugosc = deleteLastChar(&pstr);
+    for(i=0; i<dlugosc ; i++)
+    {
+        printf("%c", pstr[i]);
+    }
+    free(pstr);
+    return 0;

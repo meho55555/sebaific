@@ -1,0 +1,85 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define WYMIAR 10
+void deleteMatrix(int*** ptab, int n)
+{
+    int i;
+    for(i=0; i<n; i++)
+    {
+
+        free((*ptab)[i]);
+        (*ptab)[i]=NULL;
+    }
+}
+int** createMatrix(int n)
+{
+    int **Macierz;
+    int i;
+    Macierz=malloc(n * sizeof(*Macierz));
+    if(Macierz == NULL)
+        return NULL;
+    for(i=0; i<n; i++)
+    {
+        Macierz[i]=malloc(n * sizeof(**Macierz));
+        if(Macierz[i]==NULL)
+        {
+            deleteMatrix(&Macierz, i);
+            return NULL;
+        }
+    }
+    return Macierz;
+}
+void fillMatrix(int** tab, int n)
+{
+    int i, j;
+    int k=1;
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            tab[i][j]=k;
+            k++;
+        }
+    }
+}
+void copyMatrix(int*** pdest, int** src, int n)
+{
+    int** dest;
+    int i, j;
+    dest=createMatrix(n);
+    if(dest!=NULL)
+    {
+        for(i=0; i<n; i++)
+        {
+            for(j=0; j<n; j++)
+            {
+                dest[i][j]=src[i][j];
+            }
+        }
+        *pdest=dest;
+    }
+}
+int main()
+{
+    int i, j;
+    int** Macierz_1;
+    int** Macierz_2;
+    Macierz_1=createMatrix(WYMIAR);
+    if (Macierz_1 == NULL)
+        return -1;
+    fillMatrix(Macierz_1, WYMIAR);
+    copyMatrix(&Macierz_2, Macierz_1, WYMIAR);
+    if (Macierz_2 == NULL)
+        return -2;
+    for(i=0; i<WYMIAR; i++)
+    {
+        for(j=0; j<WYMIAR; j++)
+        {
+            printf("%4i", Macierz_2[i][j]);
+        }
+        printf("\n");
+    }
+    deleteMatrix(&Macierz_1, WYMIAR);
+    deleteMatrix(&Macierz_2, WYMIAR);
+    return 0;
+}

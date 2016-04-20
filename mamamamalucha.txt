@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+int *alok(int rozm)
+{
+    int *dynamtab;
+    int i;
+    dynamtab = malloc(rozm * sizeof(*dynamtab));
+    if(dynamtab == NULL)
+        return NULL;
+    for(i=0; i<rozm; i++)
+    {
+        dynamtab[i]=2*i+1;
+    }
+    return dynamtab;
+}
+    
+main()
+{
+    int rozm;
+    int *tab;
+    int i;
+    printf("Podaj rozmiar tablicy\n");
+    scanf("%i", &rozm);
+    tab=alok(rozm);
+    if(tab==NULL)
+        return -1;
+    for(i=0; i<rozm; i++)
+    {
+        printf("%i\n", tab[i]);
+    }
+    free(tab);
+}

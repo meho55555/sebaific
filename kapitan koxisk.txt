@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define ROZM 100
+int deleteLastChar(char** pstr)
+{
+    char * nt=NULL;
+    int i, k;
+    for(i=0; (*pstr)[i]!='\0'; i++)
