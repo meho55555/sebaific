@@ -2,8 +2,8 @@
 
 main()
 {
-printf("Sebastian Cyganek\n");
-printf("Sebastian\nCyganek\n");
-printf("Sebastian");
+printf("SMivhcasłnek\n");
+printf("FIC\n");
+printf("Król");
 printf("Cyganek");
 }
