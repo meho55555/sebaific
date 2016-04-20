@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+main()
+{
+float x, y, p;
+printf("Podaj x\n");
+scanf("%f", &x);
+printf("Podaj y\n");
+scanf("%f", &y);
+printf("x=%f\n y=%f\n", x, y);
+p=x;
+x=y;
+y=p;
+printf("x=%f\n y=%f",x, y);
+}QWDQWSS AS
