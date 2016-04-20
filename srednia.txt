@@ -4,10 +4,9 @@ main()
 {
 int srednia, a=75, b=9;
 srednia=a/b;
-printf("årednio na wykonanie jednego zadania zosta≥o %d\n minut", srednia);
+printf("≈örednio na wykonanie jednego zadania zosta≈Ço %d\n minut", srednia);
 }
-
- 
+fghfghf 
 
 #include<stdio.h>
 
@@ -15,5 +14,7 @@ main()
 {
 float srednia, a=75.0, b=9;
 srednia=a/b;
-printf("årednio na wykonanie jednego zadania zosta≥o %f minut", srednia);
-}
+printf("≈örednio na wykonanie jednego zadania zosta≈Ço %f minut", srednia);
+}ghfhgfhfghfgf
+y
+gjuh
